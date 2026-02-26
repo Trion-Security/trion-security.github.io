@@ -948,22 +948,23 @@ body {
     color: #fff;
 }
 
-/* Footer */
+/* ==========================================================================
+   8. Footer
+   ========================================================================== */
 .footer {
-    border-top: 1px solid var(--border-color);
     padding: 4rem 0 2rem;
-    background: #111111;
+    background: var(--deep-obsidian);
+    border-top: 1px solid var(--glass-border);
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    align-items: flex-start;
 }
 
 .footer-brand {
-    flex: 1;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .footer-links {
@@ -977,19 +978,69 @@ body {
     gap: 1rem;
 }
 
-.link-group strong {
-    color: var(--text-primary);
-}
-
 .link-group a {
     color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s;
+    font-size: 0.875rem;
 }
 
 .link-group a:hover {
-    color: var(--quantum-blue);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   9. Language Selector & Utilities
+   ========================================================================== */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.lang-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lang-link:hover {
+    color: var(--text-primary);
+}
+
+.lang-active {
+    color: var(--text-primary);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.lang-divider {
+    color: var(--glass-border);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media (max-width: 992px) {
+    .stages-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .stages-visual-sticky {
+        display: none;
+    }
+
+    .sidecar-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 992px) {
