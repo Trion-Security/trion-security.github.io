@@ -1089,13 +1089,13 @@ body {
 
     .social-proof-table th,
     .social-proof-table td {
-        padding: 0.75rem 0.75rem;
+        padding: 0.75rem 0.5rem;
         font-size: 0.8rem;
     }
 
     .social-proof-table-wrapper {
         width: 100%;
-        max-width: 100%;
+        max-width: calc(100vw - 2.5rem);
         overflow-x: auto;
     }
 
