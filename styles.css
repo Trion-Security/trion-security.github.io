@@ -35,8 +35,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    width: 100%;
+    background-color: var(--deep-obsidian);
 }
 
 body {
@@ -44,9 +43,10 @@ body {
     background-color: var(--deep-obsidian);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
-    width: 100%;
     position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 /* Texture Overlay */
@@ -79,6 +79,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
+    overflow: hidden;
 }
 
 .code-font {
@@ -776,6 +777,8 @@ body {
     border-radius: 0.5rem;
     color: #a8b2c4;
     overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 .latency-chart {
@@ -1008,7 +1011,6 @@ body {
     .container {
         padding: 0 1.25rem;
         width: 100%;
-        max-width: 100vw;
     }
 
     .nav-container {
